@@ -10,112 +10,89 @@ Dark green: #28b485
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
-body {
-    font-family: "lato",sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #777;
+body
+{
+    font-family: 'Lato',sans-serif;
+    line-height: 1.6;
     padding: 30px;
-
+    color: rgb(97, 92, 92);
+    font-size: 16px;
 }
 .header
 {
-    background-image: linear-gradient(to right bottom,#7ed56fcb,#28b485ce),url(../img/hero.jpg);
+    background-image:linear-gradient(to right bottom ,#7ed56fc2,#28b485cb), url(../img/hero.jpg);
     height: 95vh;
-    background-size: cover;
     background-position: top;
     position: relative;
-    clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+    background-size: cover;
+    clip-path: polygon(0 0,100% 0,100% 70vh,0 100% );
 }
 .logo-box
 {
-    position: absolute;
-    top: 30px;
-    left: 30px;
+    
 }
 .logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
     height: 35px;
 }
-.primary-text
+.primary-heading
 {
-    text-transform: uppercase;
-    color: #fff;
-
+ text-transform: uppercase;
+ color: #fff;
+ position: absolute;
+ top: 40%;
+ left: 40%;
+ transform: translate(-25%,-55%);
 }
-.primary-text-main{
+.primary-heading-main
+{
     display: block;
     font-size: 60px;
     font-weight: 400;
-    letter-spacing: 35px;
+    animation-name: moveinright;
+    animation-duration: 1s;
+    letter-spacing: 40px;
+}
+.primary-subheading
+{
+    display: block;
     animation-name: moveinleft;
-    animation-duration: 5s;
+    animation-duration: 1s;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 13px;
 
 }
-.primary-text-sub{
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 17.4px;
-    animation-name: moveinright;
-    animation-duration: 5s;
-    margin-bottom: 20px;
-}
-.text-box
+@keyframes moveinright 
 {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
+    0%
+    {
+        opacity: 0;
+        transform: translateX(-20%);
+
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
 }
 @keyframes moveinleft
 {
-    0%{
+    0%
+    {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(20%);
+
     }
     100%
     {
         opacity: 1;
         transform: translateX(0);
+
     }
-}
-@keyframes moveinright
-{
-    0%{
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    100%
-    {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-.btn:link,
-.btn:visited
-{
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 10px 40px;
-    display: inline-block;
-    border-radius: 100px;
-    
-}
-.btn:hover
-{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .8);
-}
-.btn:active{
-    transform: translateY(-1px);   
-    box-shadow: 0 10px 2px rgba(0, 0, 0, .8);
-}
-.btn-white
-{
-    color: #777;
-    background-color: #fff;
 }
