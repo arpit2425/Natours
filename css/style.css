@@ -25,6 +25,7 @@ body
     height: 95vh;
     background-position: top;
     position: relative;
+    text-align: center;
     background-size: cover;
     clip-path: polygon(0 0,100% 0,100% 70vh,0 100% );
 }
@@ -38,7 +39,8 @@ body
     left: 20px;
     height: 35px;
 }
-.primary-heading
+
+.text-box
 {
  text-transform: uppercase;
  color: #fff;
@@ -55,6 +57,7 @@ body
     animation-name: moveinright;
     animation-duration: 1s;
     letter-spacing: 40px;
+    
 }
 .primary-subheading
 {
@@ -64,6 +67,7 @@ body
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 13px;
+    margin-bottom: 60px;
 
 }
 @keyframes moveinright 
@@ -95,4 +99,30 @@ body
         transform: translateX(0);
 
     }
+}
+.btn:visited,
+.btn:link
+{
+    border-radius: 100px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .2s;
+}
+.btn-white
+{
+    background-color: #fff;
+    padding: 15px 40px;
+    display: inline-block;
+    color: #777777;
+
+}
+.btn:hover
+{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+.btn:active
+{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0, 0, 0.2);
 }
