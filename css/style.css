@@ -46,6 +46,8 @@ body{
 {
     color: #fff;
     text-transform: uppercase;
+    backface-visibility: hidden;
+   
 
 }
 .primary-heading-main
@@ -54,6 +56,8 @@ body{
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 40px;
+    animation-name: moveinright;
+    animation-duration: 1s;
 }
 .primary-heading-sub
 {
@@ -61,11 +65,66 @@ body{
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 14px;
+    animation-name: moveinleft;
+    animation-duration: 1s;
 }
 .text-box
 {
     position: absolute;
     top: 40%;
     left: 50%;
+    text-align: center;
     transform: translate(-50%,-50%);
+}
+@keyframes moveinright
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%
+    {
+        transform: translateX(20px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+@keyframes moveinleft
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%
+    {
+        transform: translateX(-20px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+.btn:visited,
+.btn:link
+{
+   
+    padding: 15px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+margin-top: 40px;
+    border-radius: 200px;
+    display: inline-block;
+}
+.btn-white
+{
+    background-color: #fff;
+    color: #777;
 }
