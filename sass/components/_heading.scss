@@ -1,0 +1,34 @@
+.primary-heading
+{
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+   
+
+}
+.primary-heading-main
+{
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 4rem;
+    animation-name: moveinright;
+    animation-duration: 1s;
+}
+.primary-heading-sub
+{
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.4rem;
+    animation-name: moveinleft;
+    animation-duration: 1s;
+}
+.text-box
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
